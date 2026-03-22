@@ -12,7 +12,8 @@
 		"homepage": "https://fabricmc.net/",
 		"sources": "https://github.com/swarties/hotbarLock"
 	},
-	"license": "LGPL 3.0",
+		  "license": "LGPL 3.0",
+		  "icon": "hotbarLock.png",
 	"environment": "client",
 	"entrypoints": {
 		"client": [
