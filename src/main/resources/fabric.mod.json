@@ -5,13 +5,14 @@
 	"name": "HotbarLock",
 	"description": "Client-side hotbar slot locking with an in-inventory control overlay.",
 	"authors": [
-		"Me!"
+		"roks",
+		"swarties"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"sources": "https://github.com/swarties/hotbarLock"
 	},
-	"license": "CC0-1.0",
+	"license": "LGPL 3.0",
 	"environment": "client",
 	"entrypoints": {
 		"client": [
