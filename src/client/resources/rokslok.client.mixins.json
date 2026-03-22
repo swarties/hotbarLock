@@ -3,7 +3,8 @@
 	"package": "com.roks.lok.mixin.client",
 	"compatibilityLevel": "JAVA_21",
 	"client": [
-		"ExampleClientMixin"
+		"AbstractContainerScreenMixin",
+		"MinecraftMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

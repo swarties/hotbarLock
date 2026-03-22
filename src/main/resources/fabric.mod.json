@@ -1,9 +1,9 @@
 {
 	"schemaVersion": 1,
-	"id": "rokslok",
+	"id": "hotbarlock",
 	"version": "${version}",
-	"name": "hotbarLock",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"name": "HotbarLock",
+	"description": "Client-side hotbar slot locking with an in-inventory control overlay.",
 	"authors": [
 		"Me!"
 	],
@@ -12,22 +12,14 @@
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
 	"license": "CC0-1.0",
-	"icon": "assets/rokslok/icon.png",
-	"environment": "*",
+	"environment": "client",
 	"entrypoints": {
-		"main": [
-			"com.roks.lok.HotbarLock"
-		],
 		"client": [
 			"com.roks.lok.HotbarLockClient"
 		]
 	},
 	"mixins": [
-		"rokslok.mixins.json",
-		{
-			"config": "rokslok.client.mixins.json",
-			"environment": "client"
-		}
+		"rokslok.client.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.18.4",
