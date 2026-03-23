@@ -6,3 +6,6 @@
 `hotbarlock-1.0.0.jar` is for players
 
 `hotbarlock-1.0.0-sources.jar` is for developers
+
+
+## Requires Fabric Loader and Fabric API.
