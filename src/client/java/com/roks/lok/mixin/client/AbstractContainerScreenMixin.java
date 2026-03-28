@@ -64,9 +64,11 @@ public abstract class AbstractContainerScreenMixin {
 			}
 		}
 
-		int selectedSlot = minecraft.player.getInventory().getSelectedSlot();
-		if (minecraft.options.keySwapOffhand.matches(context) && HotbarLockClient.isSlotLocked(selectedSlot)) {
-			cir.setReturnValue(true);
+		if (minecraft.options.keySwapOffhand.matches(context)) {
+			int hoveredHotbarIndex = hotbarlock$toHotbarIndex(this.hoveredSlot, minecraft.player.getInventory());
+			if (hoveredHotbarIndex >= 0 && HotbarLockClient.isSlotLocked(hoveredHotbarIndex)) {
+				cir.setReturnValue(true);
+			}
 		}
 	}
 
@@ -85,6 +87,10 @@ public abstract class AbstractContainerScreenMixin {
 
 	@Unique
 	private static int hotbarlock$toHotbarIndex(Slot slot, Inventory playerInventory) {
+		if (slot == null) {
+			return -1;
+		}
+
 		if (slot.container == playerInventory) {
 			int containerSlot = slot.getContainerSlot();
 			if (containerSlot >= 0 && containerSlot <= 8) {
